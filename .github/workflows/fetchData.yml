@@ -2,7 +2,7 @@ name: Fetch Crypto Data
 
 on:
   schedule:
-    - cron: "0 */2 * * *"  # Runs for every 2 hour
+    - cron: "*/5 * * * *"  # Runs for every 2 hour
 jobs:
   fetch-crypto-data:
     runs-on: ubuntu-latest
