@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   
   schedule:
-    - cron: "* */2 * * *"  # Runs for every 2 hour
+    - cron: "0 */2 * * *"  # Runs for every 2 hour
 jobs:
   fetch-crypto-data:
     runs-on: ubuntu-latest
