@@ -1,9 +1,16 @@
 const axios = require("axios");
 const CryptoData = require("../models/CryptoData");
+const mongoose = require('mongoose');
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const fetchCryptoData = async () => {
 
     try {
+        // Connect to MongoDB
+        mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+          
 
         // List of coins to fetch data for
         const coins = ["bitcoin", "matic-network", "ethereum"];
@@ -37,7 +44,9 @@ const fetchCryptoData = async () => {
 
         console.error("Error fetching crypto data:", error.message);
         
+    } finally {
+        mongoose.connection.close();
     }
 };
 
-module.exports = fetchCryptoData;
+fetchCryptoData();
