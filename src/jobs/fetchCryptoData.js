@@ -9,7 +9,7 @@ const fetchCryptoData = async () => {
 
     try {
         // Connect to MongoDB
-        mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+        mongoose.connect("mongodb+srv://arvindri2005:123Asdf@cluster0.wqzau.mongodb.net", { useNewUrlParser: true, useUnifiedTopology: true })
 
         // List of coins to fetch data for
         const coins = ["bitcoin", "matic-network", "ethereum"];
