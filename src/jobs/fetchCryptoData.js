@@ -9,7 +9,6 @@ const fetchCryptoData = async () => {
 
     try {
         // Connect to MongoDB
-        console.log(process.env.MONGO_URI);
         mongoose.connect("mongodb+srv://arvindri2005:123Asdf@cluster0.wqzau.mongodb.net", { useNewUrlParser: true, useUnifiedTopology: true })
           
 
