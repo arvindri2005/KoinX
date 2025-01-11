@@ -1,8 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const schedule = require("node-schedule");
-const fetchCryptoData = require("./jobs/fetchCryptoData");
 const deviationRoute = require("./routes/deviation");
 const statsRoute = require("./routes/stats");
 
