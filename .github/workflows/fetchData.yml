@@ -1,6 +1,8 @@
 name: Fetch Crypto Data
 
 on:
+  workflow_dispatch:
+
   schedule:
     - cron: "0 */2 * * *"  # Runs for every 2 hour
 jobs:

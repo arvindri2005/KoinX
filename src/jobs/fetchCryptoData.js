@@ -8,6 +8,9 @@ dotenv.config();
 const fetchCryptoData = async () => {
 
     try {
+        // Connect to MongoDB
+        mongoose.connect("mongodb+srv://arvindri2005:123Asdf@cluster0.wqzau.mongodb.net", { useNewUrlParser: true, useUnifiedTopology: true })
+          
 
          mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
@@ -48,4 +51,4 @@ const fetchCryptoData = async () => {
     }
 };
 
-module.exports = fetchCryptoData;
+fetchCryptoData();
